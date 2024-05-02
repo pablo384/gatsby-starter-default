@@ -7,10 +7,11 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { FloatingWhatsApp } from "react-floating-whatsapp"
 import Header from "./header"
+import FooterMine from "./footerMine"
 import "./layout.css"
-
+import imgOrkapi from "../images/ORKAPI.png"
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -33,16 +34,15 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <FooterMine></FooterMine>
+        <FloatingWhatsApp
+          avatar={imgOrkapi}
+          phoneNumber="18299023781"
+          accountName="Orkapi Technology"
+          chatMessage="Hola!👋 🤝 ¿Como podemos ayudarte?"
+          placeholder="Escribe un mensaje..."
+          statusMessage="Tipicamente, responde en menos de 1 hora"
+        ></FloatingWhatsApp>
       </div>
     </>
   )

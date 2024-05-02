@@ -5,116 +5,93 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
+import { Typography, Card, CardBody } from "@material-tailwind/react"
 
-const links = [
+const featuresLotenet = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+    img: "",
+    title: "FLEXIBLE",
+    description: "Puedes vender cualquier tipo de juego e se te ocurra.",
   },
   {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
+    img: "",
+    title: "INTERFAZ AMIGABLE",
     description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
+      "Fue diseñada para que sea simple, facil y veloz para su uso constante.",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
+    img: "",
+    title: "DOCUMENTACIÓN",
     description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+      "Te damos entrenamiento  para usar nuestra aplicacion ademas de recursos extras que puedes acceder en cualquier momento.",
   },
   {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
+    img: "",
+    title: "ACTUALIZACIONES GRATIS ",
     description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+      "Te ofrecemos actualizaciones de seguridad y nuevas caracteristicas sin costo extra.",
   },
 ]
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+const FeaturesSection = () => {
+  const list = featuresLotenet.map((item, idx) => (
+    <div key={idx} className="text-center">
+      <Typography variant="h6">{item.title}</Typography>
+      <Typography variant="small">{item.description}</Typography>
+    </div>
+  ))
+  return list
+}
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+    {/* MAIN SECTION */}
+    <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 p-5 rounded-lg bg-red-700 text-white">
+        <div>
+          <Typography variant="h1">Orkapi Technology</Typography>
+          <Typography variant="paragraph" >
+            Somos una empresa lider en el desarrollo de software de
+            administracion y venta de juegos de loteria y electronicos.
+          </Typography>
+        </div>
+        <div className="flex items-center">
+          <StaticImage
+            alt="logo"
+            src="../images/orkapi-blanco.png"
+          ></StaticImage>
+        </div>
+      </div>
     </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    {/* MID SECTION */}
+    <Card className="p-5 mt-5 mb-5">
+      <CardBody>
+        <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1">
+            <div className="text-center">
+              <Typography variant="h2">LotenetSoft</Typography>
+              <Typography variant="paragraph">
+                Nos hemos consolidado con la plataforma mas estable y operativa
+                del mercado dando la informacion en tiempo real justo cuando la
+                necesitas.
+              </Typography>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 text-center">
+              <div className="flex items-center justify-center">
+                <StaticImage
+                  width={250}
+                  alt="logo"
+                  src="../images/lotenetbl.png"
+                ></StaticImage>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <FeaturesSection></FeaturesSection>
+              </div>
+            </div>
+          </div>
+        </div>
+      </CardBody>
+    </Card>
   </Layout>
 )
 
@@ -123,6 +100,6 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Inicio" />
 
 export default IndexPage
