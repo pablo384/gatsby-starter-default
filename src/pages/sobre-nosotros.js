@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Typography, Card, CardBody } from "@material-tailwind/react"
+// import"../images/team.svg"from "../images/team.svg"
 const SecondPage = () => (
   <Layout>
     <Card className="mt-2 mb-2">
@@ -27,12 +28,24 @@ const SecondPage = () => (
             dicersidad y mejor experiencia en Juegos de Loterias y Apuestas.
           </Typography>
         </div>
-        <div>img</div>
+        <div className="text-center">
+          <StaticImage
+            alt="Mision-IMG"
+            src="../images/team.svg"
+            height={250}
+          ></StaticImage>
+        </div>
       </CardBody>
     </Card>
     <Card className="mt-2 mb-2">
       <CardBody className="grid grid-cols-1 md:grid-cols-2">
-        <div>img</div>
+        <div className="text-center">
+          <StaticImage
+            alt="ValoresIMG"
+            src="../images/vision.svg"
+            height={250}
+          ></StaticImage>
+        </div>
         <div>
           <Typography variant="h5">Visión</Typography>
           <Typography variant="paragraph">
@@ -44,7 +57,7 @@ const SecondPage = () => (
       </CardBody>
     </Card>
     <Card className="mt-2 mb-2">
-      <CardBody className="grid grid-cols-1 md:grid-cols-2">
+      <CardBody className="grid grid-cols-1 md:grid-cols-2 justify-center content-center">
         <div>
           <Typography variant="h5">Valores</Typography>
           <Typography variant="paragraph">
@@ -53,7 +66,13 @@ const SecondPage = () => (
             procesos y registros de informacion.
           </Typography>
         </div>
-        <div>img</div>
+        <div className="text-center">
+          <StaticImage
+            alt="ValoresIMG"
+            src="../images/cooperation.svg"
+            height={250}
+          ></StaticImage>
+        </div>
       </CardBody>
     </Card>
   </Layout>

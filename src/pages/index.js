@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import NuestrosClientes from "../components/nuestrosClientes"
 import * as styles from "../components/index.module.css"
 import { Typography, Card, CardBody } from "@material-tailwind/react"
 
@@ -50,7 +51,7 @@ const IndexPage = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 p-5 rounded-lg bg-red-700 text-white">
         <div>
           <Typography variant="h1">Orkapi Technology</Typography>
-          <Typography variant="paragraph" >
+          <Typography variant="paragraph">
             Somos una empresa lider en el desarrollo de software de
             administracion y venta de juegos de loteria y electronicos.
           </Typography>
@@ -64,7 +65,7 @@ const IndexPage = () => (
       </div>
     </div>
     {/* MID SECTION */}
-    <Card className="p-5 mt-5 mb-5">
+    <Card className="p-5 mt-5">
       <CardBody>
         <div className="grid grid-cols-1 gap-4">
           <div className="grid grid-cols-1">
@@ -91,6 +92,11 @@ const IndexPage = () => (
           </div>
         </div>
       </CardBody>
+    </Card>
+
+    {/* Nuestros cientes */}
+    <Card className="p-5 mt-5 mb-5 ">
+      <NuestrosClientes></NuestrosClientes>
     </Card>
   </Layout>
 )
