@@ -11,10 +11,20 @@ const SecondPage = () => (
       <CardBody>
         <div className="grid grid-cols-1 text-center">
           {/* <Typography variant="h1">Sobre nosotros</Typography> */}
-          <Typography variant="h2">Orkapi Technology</Typography>
+          <Typography variant="h2">Orkapi</Typography>
           <Typography variant="paragraph">
-            Somos una empresa lider en el desarrollo de software de
-            administracion y venta de juegos de loteria y electronicos.
+            ORKAPI se destaca como una empresa líder en el desarrollo de
+            software especializado para la gestión y comercialización de juegos
+            de lotería y productos electrónicos. Nos enfocamos en proporcionar
+            soluciones innovadoras y eficientes que faciliten la administración
+            y venta de estos productos en diversas plataformas. Contamos con un
+            equipo altamente capacitado y experimentado en el desarrollo de
+            software, lo que nos permite ofrecer soluciones personalizadas que
+            se ajusten a las necesidades específicas de nuestros clientes.
+            Nuestro software de administración ofrece un control completo sobre
+            los procesos de ventas, análisis de datos y seguimiento de
+            resultados, lo que garantiza una gestión ágil y efectiva del negocio
+            de lotería y productos electrónicos.
           </Typography>
         </div>
       </CardBody>

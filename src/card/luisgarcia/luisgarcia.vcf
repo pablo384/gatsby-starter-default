@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Luis Garcia
+N:Garcia;Luis;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:lgarcia@orkapi.com
+item1.X-ABLabel:
+TEL;TYPE=CELL:+18096988507
+item2.ORG:Orkapi Technology\, SRL
+item2.X-ABLabel:
+item3.TITLE:Project Manager
+item3.X-ABLabel:
+item4.URL:http\://www.orkapi.com
+item4.X-ABLabel:Home Page
+PHOTO:https://lh3.googleusercontent.com/contacts/AG6tpzFia2lyJ6Szblq5cDh5K5
+ A9QEFEjFU_xFxbehi5Ho8YZaf9VMsG
+CATEGORIES:myContacts
+END:VCARD

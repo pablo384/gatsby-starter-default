@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
         <FloatingWhatsApp
           avatar={imgOrkapi}
           phoneNumber="18093837933"
-          accountName="Orkapi Technology"
+          accountName="Orkapi"
           chatMessage="Hola!👋 🤝 ¿Como podemos ayudarte?"
           placeholder="Escribe un mensaje..."
           statusMessage="Tipicamente, responde en menos de 1 hora"

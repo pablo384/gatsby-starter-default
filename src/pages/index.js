@@ -1,11 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import NuestrosClientes from "../components/nuestrosClientes"
-import * as styles from "../components/index.module.css"
+import "../components/index.module.css"
+import "./index.css"
 import { Typography, Card, CardBody } from "@material-tailwind/react"
 
 const featuresLotenet = [
@@ -50,17 +50,19 @@ const IndexPage = () => (
     <div className="grid grid-cols-1 gap-4">
       <div className="grid grid-cols-1 md:grid-cols-2 p-5 rounded-lg bg-red-700 text-white">
         <div>
-          <Typography variant="h1">Orkapi Technology</Typography>
+          <Typography variant="h1">Orkapi</Typography>
           <Typography variant="paragraph">
             Somos una empresa lider en el desarrollo de software de
             administracion y venta de juegos de loteria y electronicos.
           </Typography>
         </div>
         <div className="flex items-center">
-          <StaticImage
-            alt="logo"
-            src="../images/orkapi-blanco.png"
-          ></StaticImage>
+          <div className="logo-blanco">
+            <StaticImage
+              alt="logo"
+              src="../images/orkapi-logo.png"
+            ></StaticImage>
+          </div>
         </div>
       </div>
     </div>

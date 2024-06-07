@@ -20,17 +20,19 @@ function FooterMine() {
             <div className="grid grid-cols-1 justify-between gap-0 md:grid-cols-2">
               <div>
                 <Typography variant="h5" className="mb-1">
-                  Orkapi Technology
+                  Orkapi República Dominicana
                 </Typography>
                 <Typography
                   as="a"
                   href="https://maps.app.goo.gl/1bQDurZ3gRKDP7FV8"
+                  target="_blank"
                   variant="small"
                   className="mb-1"
                 >
                   García Godoy #81 Plaza Estela, Suite 210 La Vega, República
                   Dominicana
                 </Typography>
+
                 <Typography
                   as="a"
                   href="mailto:info@orkapi.com"
@@ -46,6 +48,28 @@ function FooterMine() {
                   className="mb-6"
                 >
                   Tel: 809-573-8786
+                </Typography>
+
+                <Typography variant="h5" className="mb-1">
+                  Orkapi Panama, S. A.
+                </Typography>
+                <Typography
+                  as="a"
+                  href="https://maps.app.goo.gl/mhphvjWHbGjVM6Ah7"
+                  target="_blank"
+                  variant="small"
+                  className="mb-1"
+                >
+                  Building 3855, Parque Internacional de Negocios, Panamá,
+                  Provincia de Panamá, Panamá
+                </Typography>
+                <Typography
+                  as="a"
+                  href="tel:+507-838-8989"
+                  variant="small"
+                  className="mb-6"
+                >
+                  Tel: +507 838-8989
                 </Typography>
               </div>
               <div className="grid grid-cols-3 justify-between gap-4">
@@ -79,9 +103,8 @@ function FooterMine() {
                 variant="small"
                 className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
               >
-                &copy; {currentYear}{" "}
-                <a href="https://orkapi.com/">Orkapi Technology</a>. All Rights
-                Reserved.
+                &copy; {currentYear} <a href="https://orkapi.com/">Orkapi</a>.
+                All Rights Reserved.
               </Typography>
               <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
                 {/* <Typography
