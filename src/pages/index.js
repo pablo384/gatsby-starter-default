@@ -6,8 +6,7 @@ import NuestrosClientes from "../components/nuestrosClientes"
 import "../components/index.module.css"
 import "./index.css"
 import { Typography, Card, CardBody } from "@material-tailwind/react"
-import * as img from "../images/flexible.png"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
 const featuresLotenet = [
