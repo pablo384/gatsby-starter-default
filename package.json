@@ -29,7 +29,8 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp -r src/card/ public",
+    "deploy": "gcloud storage cp --recursive public/* gs://orkapi.com/",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",

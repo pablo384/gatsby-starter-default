@@ -1,107 +1,142 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import NuestrosClientes from "../components/nuestrosClientes"
+import RunnerSection from "../components/runnerSection"
 import "../components/index.module.css"
 import "./index.css"
 import { Typography, Card, CardBody } from "@material-tailwind/react"
+import * as img from "../images/flexible.png"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { useStaticQuery, graphql } from "gatsby"
 
 const featuresLotenet = [
   {
-    img: "",
+    img: "flexible",
     title: "FLEXIBLE",
     description: "Puedes vender cualquier tipo de juego e se te ocurra.",
   },
   {
-    img: "",
+    img: "interfaz",
     title: "INTERFAZ AMIGABLE",
     description:
       "Fue diseñada para que sea simple, facil y veloz para su uso constante.",
   },
   {
-    img: "",
+    img: "documentacion",
     title: "DOCUMENTACIÓN",
     description:
       "Te damos entrenamiento  para usar nuestra aplicacion ademas de recursos extras que puedes acceder en cualquier momento.",
   },
   {
-    img: "",
+    img: "actualizaciones",
     title: "ACTUALIZACIONES GRATIS ",
     description:
       "Te ofrecemos actualizaciones de seguridad y nuevas caracteristicas sin costo extra.",
   },
 ]
 
-const FeaturesSection = () => {
-  const list = featuresLotenet.map((item, idx) => (
-    <div key={idx} className="text-center">
-      <Typography variant="h6">{item.title}</Typography>
-      <Typography variant="small">{item.description}</Typography>
-    </div>
-  ))
+const FeaturesSection = ({ data }) => {
+  const list = featuresLotenet.map((item, idx) => {
+    const image = data[item.img].childImageSharp.gatsbyImageData
+    return (
+      <div key={idx} className="text-center">
+        <GatsbyImage alt="logo" image={image}></GatsbyImage>
+        <Typography variant="h6">{item.title}</Typography>
+        <Typography variant="small">{item.description}</Typography>
+      </div>
+    )
+  })
   return list
 }
 
-const IndexPage = () => (
-  <Layout>
-    {/* MAIN SECTION */}
-    <div className="grid grid-cols-1 gap-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 p-5 rounded-lg bg-red-700 text-white">
-        <div>
-          <Typography variant="h1">Orkapi</Typography>
-          <Typography variant="paragraph">
-            Somos una empresa lider en el desarrollo de software de
-            administracion y venta de juegos de loteria y electronicos.
-          </Typography>
-        </div>
-        <div className="flex items-center">
-          <div className="logo-blanco">
-            <StaticImage
-              alt="logo"
-              src="../images/orkapi-logo.png"
-            ></StaticImage>
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    {
+      documentacion: file(relativePath: { eq: "documentacion.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 50, placeholder: DOMINANT_COLOR)
+        }
+      }
+      interfaz: file(relativePath: { eq: "interfaz.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 50, placeholder: DOMINANT_COLOR)
+        }
+      }
+      actualizaciones: file(relativePath: { eq: "actualizaciones.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 50, placeholder: DOMINANT_COLOR)
+        }
+      }
+      flexible: file(relativePath: { eq: "flexible.png" }) {
+        childImageSharp {
+          gatsbyImageData(height: 50, placeholder: DOMINANT_COLOR)
+        }
+      }
+    }
+  `)
+  return (
+    <Layout>
+      {/* MAIN SECTION */}
+      <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 p-5 rounded-lg bg-red-700 text-white">
+          <div>
+            <Typography variant="h1">Orkapi</Typography>
+            <Typography variant="paragraph">
+              Somos una empresa lider en el desarrollo de software de
+              administracion y venta de juegos de loteria y electronicos.
+            </Typography>
+          </div>
+          <div className="flex items-center">
+            <div className="logo-blanco">
+              <StaticImage
+                alt="logo"
+                src="../images/orkapi-logo.png"
+              ></StaticImage>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    {/* MID SECTION */}
-    <Card className="p-5 mt-5">
-      <CardBody>
-        <div className="grid grid-cols-1 gap-4">
-          <div className="grid grid-cols-1">
-            <div className="text-center">
-              <Typography variant="h2">LotenetSoft</Typography>
-              <Typography variant="paragraph">
-                Nos hemos consolidado con la plataforma mas estable y operativa
-                del mercado dando la informacion en tiempo real justo cuando la
-                necesitas.
-              </Typography>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 text-center">
-              <div className="flex items-center justify-center">
-                <StaticImage
-                  width={250}
-                  alt="logo"
-                  src="../images/lotenetbl.png"
-                ></StaticImage>
+      {/* RUNNER */}
+      <RunnerSection />
+      {/* MID SECTION */}
+      <Card className="p-5 mt-5">
+        <CardBody>
+          <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1">
+              <div className="text-center">
+                <Typography variant="h2">LotenetSoft</Typography>
+                <Typography variant="paragraph">
+                  Nos hemos consolidado con la plataforma mas estable y
+                  operativa del mercado dando la informacion en tiempo real
+                  justo cuando la necesitas.
+                </Typography>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <FeaturesSection></FeaturesSection>
+              <div className="grid grid-cols-1 md:grid-cols-2 text-center">
+                <div className="flex items-center justify-center">
+                  <StaticImage
+                    width={250}
+                    alt="logo"
+                    src="../images/lotenetbl.png"
+                  ></StaticImage>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  <FeaturesSection data={data}></FeaturesSection>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </CardBody>
-    </Card>
+        </CardBody>
+      </Card>
 
-    {/* Nuestros cientes */}
-    <Card className="p-5 mt-5 mb-5 ">
-      <NuestrosClientes></NuestrosClientes>
-    </Card>
-  </Layout>
-)
+      {/* Nuestros cientes */}
+      <Card className="p-5 mt-5 mb-5 ">
+        <NuestrosClientes></NuestrosClientes>
+      </Card>
+    </Layout>
+  )
+}
 
 /**
  * Head export to define metadata for the page

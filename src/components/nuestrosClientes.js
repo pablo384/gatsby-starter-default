@@ -11,7 +11,7 @@ function NuestrosClientes({}) {
             Nuestros Clientes
           </h2>
           <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-4 dark:text-gray-400">
-            <div className="flex justify-center items-center logo-cliente-loteka">
+            <div className="flex justify-center items-center logo-cliente-loteka shadow-xl hover:drop-shadow-2xl">
               <a target="_blank" href="https://loteka.com.do/">
                 <StaticImage
                   alt="Loteka"
@@ -19,7 +19,7 @@ function NuestrosClientes({}) {
                 ></StaticImage>
               </a>
             </div>
-            <div className="flex justify-center items-center logo-cliente-lotedom">
+            <div className="flex justify-center items-center logo-cliente-lotedom shadow-xl hover:drop-shadow-2xl">
               <a target="_blank" href="https://lotedom.com/">
                 <StaticImage
                   alt="Lotedom"
@@ -27,19 +27,19 @@ function NuestrosClientes({}) {
                 ></StaticImage>
               </a>
             </div>
-            <div className="flex justify-center items-center logo-cliente-blanco">
-              <a target="_blank" href="http://www.lnb.gob.pa/">
-                <StaticImage
-                  alt="LNB"
-                  src="../images/clientes/lnb.png"
-                ></StaticImage>
-              </a>
-            </div>
-            <div className="flex justify-center items-center logo-cliente-blanco">
+            <div className="flex justify-center items-center logo-cliente-blanco shadow-xl hover:drop-shadow-2xl">
               <a target="_blank" href="https://laprimera.do/">
                 <StaticImage
                   alt="LA PRIMERA"
                   src="../images/clientes/la-primera.svg"
+                ></StaticImage>
+              </a>
+            </div>
+            <div className="flex justify-center items-center logo-cliente-blanco shadow-xl hover:drop-shadow-2xl">
+              <a target="_blank" href="http://www.lnb.gob.pa/">
+                <StaticImage
+                  alt="LNB"
+                  src="../images/clientes/lnb.png"
                 ></StaticImage>
               </a>
             </div>
