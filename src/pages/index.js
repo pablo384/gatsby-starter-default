@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import NuestrosClientes from "../components/nuestrosClientes"
-import RunnerSection from "../components/runnerSection"
 import "../components/index.module.css"
 import "./index.css"
 import { Typography, Card, CardBody } from "@material-tailwind/react"
@@ -99,7 +98,7 @@ const IndexPage = () => {
         </div>
       </div>
       {/* RUNNER */}
-      <RunnerSection />
+      {/* <RunnerSection /> */}
       {/* MID SECTION */}
       <Card className="p-5 mt-5">
         <CardBody>
