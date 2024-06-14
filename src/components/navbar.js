@@ -217,7 +217,7 @@ export function NavbarWithMegaMenu({ siteTitle }) {
           >
             <StaticImage
               alt={siteTitle}
-              src="../images/ORKAPI-logo.svg"
+              src="../images/orkapi-logo.svg"
               height={50}
             />
           </Typography>
