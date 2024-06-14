@@ -22,6 +22,8 @@ stages:
   - deploy
 
 build:
+  tags:
+    - linux
   stage: build
   script:
     - npm install
@@ -31,6 +33,8 @@ build:
       - public/
 
 deploy:
+  tags:
+    - linux
   only:
     - master
   stage: deploy
