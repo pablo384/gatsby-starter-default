@@ -11,13 +11,11 @@
 # https://hub.docker.com/r/library/node/tags/
 image: node:lts
 
-
 # This folder is cached between builds
 # https://docs.gitlab.com/ee/ci/yaml/index.html#cache
 cache:
   paths:
     - node_modules/
-
 
 stages:
   - build
@@ -33,20 +31,21 @@ build:
       - public/
 
 deploy:
+  only:
+    - master
   stage: deploy
   dependencies:
     - build
   before_script:
-    - echo $GCP_KEY
-    - curl --location --remote-name https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz
+    # Download and install Google Cloud SDK
+    - wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
+    - tar zxvf google-cloud-sdk.tar.gz && ./google-cloud-sdk/install.sh --usage-reporting=false --path-update=true
+    - PATH="google-cloud-sdk/bin:${PATH}"
+    - gcloud --quiet components update
     - echo "$GCP_KEY" | base64 --decode --ignore-garbage > gcloud-service-key.json
-    - cp gcloud-service-key.json ./infra/gcloud-service-key.json
-    - tar xvf google-cloud-sdk.tar.gz
-    - ./google-cloud-sdk/install.sh --quiet
-    - source ./google-cloud-sdk/path.bash.inc
     - gcloud auth activate-service-account --key-file gcloud-service-key.json
     - gcloud config set project $GCP_PROJECT_ID
     - gcloud config set run/region us-east1
   script:
-      - npm run deploy
+    - npm run deploy
   environment: production
