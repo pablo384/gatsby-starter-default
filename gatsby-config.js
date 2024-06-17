@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Orkapi`,
+        short_name: `orkapi`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
