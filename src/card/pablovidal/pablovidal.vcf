@@ -4,8 +4,8 @@ FN:Pablo Alberto Vidal
 N:Vidal;Pablo Alberto;;;
 item1.EMAIL;TYPE=INTERNET:pablovidal@orkapi.com
 item1.X-ABLabel:
-TEL;TYPE=CELL:(809) 573-8786
-item2.TEL:(809) 573-8786
+TEL;TYPE=CELL:+1809 753-3445
+item2.TEL:+1809 573-8786
 item2.X-ABLabel:Dominicana
 item3.TEL:+507 838 8989
 item3.X-ABLabel:Panamá
