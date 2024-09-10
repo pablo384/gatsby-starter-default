@@ -127,7 +127,7 @@ function FooterMine() {
                 </Typography> */}
                 <Typography
                   as="a"
-                  href="https://www.instagram.com/orkapitechnology/"
+                  href="https://www.instagram.com/orkapi_srl/"
                   className="opacity-80 transition-opacity hover:opacity-100"
                 >
                   <svg
