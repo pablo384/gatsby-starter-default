@@ -13,25 +13,25 @@ const featuresLotenet = [
   {
     img: "flexible",
     title: "FLEXIBLE",
-    description: "Puedes vender cualquier tipo de juego e se te ocurra.",
+    description: "Puedes vender cualquier tipo de juego que se te ocurra.",
   },
   {
     img: "interfaz",
     title: "INTERFAZ AMIGABLE",
     description:
-      "Fue diseñada para que sea simple, facil y veloz para su uso constante.",
+      "Fue diseñada para que sea simple, fácil y veloz para su uso constante.",
   },
   {
     img: "documentacion",
     title: "DOCUMENTACIÓN",
     description:
-      "Te damos entrenamiento  para usar nuestra aplicacion ademas de recursos extras que puedes acceder en cualquier momento.",
+      "Te damos entrenamiento para usar nuestra aplicación, además de recursos extras que puedes acceder en cualquier momento.",
   },
   {
     img: "actualizaciones",
     title: "ACTUALIZACIONES GRATIS ",
     description:
-      "Te ofrecemos actualizaciones de seguridad y nuevas caracteristicas sin costo extra.",
+      "Te ofrecemos actualizaciones de seguridad y nuevas características sin costo extra.",
   },
 ]
 
@@ -82,8 +82,7 @@ const IndexPage = () => {
           <div>
             <Typography variant="h1">Orkapi</Typography>
             <Typography variant="paragraph">
-              Somos una empresa lider en el desarrollo de software de
-              administracion y venta de juegos de loteria y electronicos.
+            Somos una empresa líder en el desarrollo de software de administración y venta de juegos de lotería y electrónicos.
             </Typography>
           </div>
           <div className="flex items-center">
@@ -106,9 +105,7 @@ const IndexPage = () => {
               <div className="text-center">
                 <Typography variant="h2">LotenetSoft</Typography>
                 <Typography variant="paragraph">
-                  Nos hemos consolidado con la plataforma mas estable y
-                  operativa del mercado dando la informacion en tiempo real
-                  justo cuando la necesitas.
+                Nos hemos consolidado con la plataforma más estable y operativa del mercado, dando la información en tiempo real justo cuando la necesitas.
                 </Typography>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 text-center">

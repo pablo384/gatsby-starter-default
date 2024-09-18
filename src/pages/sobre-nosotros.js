@@ -13,18 +13,7 @@ const SecondPage = () => (
           {/* <Typography variant="h1">Sobre nosotros</Typography> */}
           <Typography variant="h2">Orkapi</Typography>
           <Typography variant="paragraph">
-            ORKAPI se destaca como una empresa líder en el desarrollo de
-            software especializado para la gestión y comercialización de juegos
-            de lotería y productos electrónicos. Nos enfocamos en proporcionar
-            soluciones innovadoras y eficientes que faciliten la administración
-            y venta de estos productos en diversas plataformas. Contamos con un
-            equipo altamente capacitado y experimentado en el desarrollo de
-            software, lo que nos permite ofrecer soluciones personalizadas que
-            se ajusten a las necesidades específicas de nuestros clientes.
-            Nuestro software de administración ofrece un control completo sobre
-            los procesos de ventas, análisis de datos y seguimiento de
-            resultados, lo que garantiza una gestión ágil y efectiva del negocio
-            de lotería y productos electrónicos.
+          ORKAPI se destaca como una empresa líder en el desarrollo de software especializado para la gestión y comercialización de juegos de lotería y productos electrónicos. Nos enfocamos en proporcionar soluciones innovadoras y eficientes que faciliten la administración y venta de estos productos en diversas plataformas. Contamos con un equipo altamente capacitado y experimentado en el desarrollo de software, lo que nos permite ofrecer soluciones personalizadas que se ajusten a las necesidades específicas de nuestros clientes. Nuestro software de administración ofrece un control completo sobre los procesos de ventas, análisis de datos y seguimiento de resultados, lo que garantiza una gestión ágil y efectiva del negocio de lotería y productos electrónicos.
           </Typography>
         </div>
       </CardBody>
@@ -34,8 +23,7 @@ const SecondPage = () => (
         <div>
           <Typography variant="h5">Misión</Typography>
           <Typography variant="paragraph">
-            Proveer a nuestros clientes la capacidad de ofrecer la mayor
-            dicersidad y mejor experiencia en Juegos de Loterias y Apuestas.
+          Proveer a nuestros clientes la capacidad de ofrecer la mayor diversidad y mejor experiencia en juegos de loterías y apuestas.
           </Typography>
         </div>
         <div className="text-center">
@@ -59,9 +47,7 @@ const SecondPage = () => (
         <div>
           <Typography variant="h5">Visión</Typography>
           <Typography variant="paragraph">
-            Ser la empresa con el mejor y mas eficiente modelo de procesamiento;
-            la gestion de apuestas y resultados financieros para agilizar el
-            desempeño y crecimiento de las operaciones de nuestros clientes.
+          Ser la empresa con el mejor y más eficiente modelo de procesamiento; la gestión de apuestas y resultados financieros para agilizar el desempeño y crecimiento de las operaciones de nuestros clientes.
           </Typography>
         </div>
       </CardBody>
@@ -71,9 +57,7 @@ const SecondPage = () => (
         <div>
           <Typography variant="h5">Valores</Typography>
           <Typography variant="paragraph">
-            Desarrollar operaciones comerciales basados en la mutua confianza,
-            la etica profesional e integridad de nuestro personal, nuestros
-            procesos y registros de informacion.
+          Desarrollar operaciones comerciales basadas en la mutua confianza, la ética profesional e integridad de nuestro personal, nuestros procesos y registros de información.
           </Typography>
         </div>
         <div className="text-center">
